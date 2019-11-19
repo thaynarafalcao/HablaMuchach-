@@ -1,0 +1,78 @@
+.col-1{width: 8.3%}
+.col-2{width: 16.6%}
+.col-3{width: 25%}
+.col-4{width: 33.3}
+.col-5{width: 41.6}
+.col-6{width: 50%}
+.col-7{width: 58.3%}
+.col-8{width: 66.6%}
+.col-9{width: 75%}
+.col-10{width: 83.3%}
+.col-11{width: 91.6%}
+.col-12{width: 100%}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12{float: left; padding: 15px; box-sizing: border-box; }
+
+
+.cabecalho{ text-align: center;  }
+	h1{font-weight: inherit;}
+    h2{text-align: center;}
+    td{padding: 10px;}
+    p{font-size: 17px; }
+
+    
+    body{
+
+
+
+	
+	background: url(fundo.jpg);
+    background-size: 65%;
+    
+
+        
+    } 
+    .in{
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        border-bottom: 1px solid black;
+        outline: 0;}
+    .rodape{
+        position:absolute;
+    	bottom:0;
+   		width:100%;
+     }
+    .audio{width: 350px;}
+    .completar{margin-left: 80px;}
+    .margem{padding: 30px;}
+    .segundo{margin-left: 160px;}
+    .verdade{margin-left: 37px;}
+    #caixa{border: solid 2px black; width:400px; text-align: justify;}
+    #esquerda{text-align: justify;} 
+    #centralizar{text-align: center;}
+    #inicial{padding: 100px; }
+    #primeiro{padding: 80px;}
+    #quadrado{border: solid 1px black; width:720px; height: 460px; background-color: white; margin-top: 150px;}
+    #rbd{padding: 20px;} 
+    #sublinhar{text-decoration: underline;}
+    #tabela{border: solid 2px black; width:200px;}
+    #titulo{font-size: 50px;}
+    #tabela{border: solid 4px black; width:200px;  }
+    #terceiro{padding: 50px;}   
+    #ultimo{padding: 130px;}
+    #verbo{ text-align: initial; border: solid 1px black;  margin-right: auto; margin-left: 2px; background-color: lightyellow;}
+
+   
+    
+   

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>¡Habla, Muchach@!</title>
+</head>
+<meta charset="utf-8">
+<body>
+	 <div class="row">
+      <div class="col-12 cabecalho">
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 menuEsquerdo">      
+      </div>
+    </div>
+  
+    <div class="row">
+    <div class="col-8 principal">
+    <center>
+    <div id="quadrado" >
+      <div id="primeiro">
+	<p>b) ¿Qué tienen los personajes en común?</p> 
+	<input type="radio" name="pergunta3" value="n"> La familia<br>
+	<input type="radio" name="pergunta3" value="s">El aula donde estudian<br>
+	<input type="radio" name="pergunta3" value="n">La religión<br>
+ 
+	<br>
+
+	<button id="botao" onclick="comparar()">Verificar</button>
+	<button id="btnAvancar" onclick="window.location.href='ex2.4.html';" disabled>Siguiente</button>
+	</div>
+</center>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-2 menuDireito">   
+  </div>
+</div>  
+  
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+      </div>
+    </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script >
+ 
+
+  function comparar(){  	
+  	alternativaUsuario= document.querySelector('input:checked').value;
+
+  	if (alternativaUsuario == 's') {
+
+  	document.getElementById("botao").style.backgroundColor = "green";
+    $('#btnAvancar').removeAttr('disabled');
+  	}
+  	else
+  	document.getElementById("botao").style.backgroundColor = "red";
+
+
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="css.css">
+</html>

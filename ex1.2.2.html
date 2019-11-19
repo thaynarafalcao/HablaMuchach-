@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>¡Habla, Muchach@!</title>
+</head>
+<body>
+	<div class="row">
+      <div class="col-12 cabecalho">
+     
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-2 menuEsquerdo">  
+    </div>
+ 	</div>
+  
+  <div class="row">
+    <div class="col-8 principal">
+    <center>
+    <div id="quadrado">	
+    <div id="terceiro">
+     
+        <p>III</p>
+	
+	<audio controls class="audio">
+ 		<source src="lucas santos certo.mp3" type="audio/mp3">
+	</audio>
+	
+	<div>
+		<textarea cols="45" rows="7" placeholder="transcribe:"></textarea>
+	</div>	
+<br>
+	<div>
+		<button id="botao" onclick="comparar()">Verificar</button>
+		<button id="btnAvancar" onclick="window.location.href='ex1.3.html';"disabled>Siguiente</button>
+	</div>
+	</center>
+	</div>
+</div>
+	
+	</div>
+	</div>
+
+
+<div class="row">
+  <div class="col-2 menuDireito">
+     
+   </div>
+</div>	
+	
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+          </div>
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+
+  function comparar (){
+    textoCerto = "buenos dias me llamo lucas garcia tengo dieciocho años soy estudiante en ifpr y vivo en cuarto centenario me gusta beber terere y cocinar no tengo hijos";
+    textoDigitado = document.querySelector('textarea').value;
+
+   
+
+    if (textoCerto === textoDigitado) {
+      $('#btnAvancar').removeAttr('disabled');
+      document.getElementById("botao").style.backgroundColor = "green";
+    }
+    else{
+      
+      document.getElementById("botao").style.backgroundColor = "red";
+      alert('intenta nuevamente');
+    }
+  }
+ 
+
+ </script>
+ 
+
+<link rel="stylesheet" type="text/css" href="css.css">
+</html>

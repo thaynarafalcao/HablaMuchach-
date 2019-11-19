@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>¡Habla, Muchach@!</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-12 cabecalho">
+     
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-2 menuEsquerdo">
+      <nav>
+        <ul>
+          
+        </ul>
+      </nav>
+      
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-8 principal">
+      <center>
+      <div id="quadrado" >
+      <div id="primeiro">
+       <p> 1. Señala las palabras que pueden estar presentes en una Presentación personal.</p>
+      
+      <table id="tabela">
+        <tr>
+          <td><span class="palavra">Sueños</span></td>
+          <td><span class="palavra correta">Nombre</span></td>
+          <td><span class="palavra">Dirección</span></td>
+          <td><span class="palavra correta">Gustos</span></td>
+        </tr>
+        <tr>
+          <td><span class="palavra correta">Familia</span></td>
+          <td><span class="palavra correta">Edad</span></td>
+          <td><span class="palavra ">Correo Electrónico</span></td>
+          <td><span class="palavra">Calidades</span></td>
+        </tr>
+        <tr>
+          <td><span class="palavra correta">Profesión</span></td>
+          <td><span class="palavra">Teléfono</span></td>
+          <td><span class="palavra correta">Nacionalidad</span></td>
+          <td><span class="palavra ">Vecinos</span></td>
+          
+        </tr>
+      </table><br>
+
+      <div>
+      <input  id="botao" type="button" onclick="verificar()" value="Verificar">
+      <input id="botao"type="button" onclick="limpar()" value="Limpiar">
+      <button   id="btnAvancar" onclick="window.location.href='ex1.2.html';" disabled>Siguiente</button>
+    </div>
+    </div>  
+    </div>
+		</center>
+  
+  	</div>
+	</div>
+  
+  <div class="row">
+  <div class="col-2 menuDireito">
+      <nav>
+        <ul>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+          </div>
+    </div>
+  </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $('.palavra').click(function () { clicar(this); });
+
+  function clicar(elemento){
+    if ($(elemento).hasClass('clicado')) {
+      $(elemento).removeClass('clicado');
+    }
+    else{
+      $(elemento).addClass('clicado');
+    }
+    
+  }
+  
+  function limpar(){
+    $('.palavra').each(function () {
+      $(this).removeClass('verificado');
+      $(this).removeClass('clicado');
+    });
+    $('.palavra').off('click');
+    $('.palavra').click(function () { clicar(this); });
+    $('#btnAvancar').attr('disabled', 'disabled');
+  }
+
+    function verificar(elemento){
+      var cont_v = 0;
+      var cont_f = 0;
+    $('.clicado').each(function(){
+      
+      if($(this).hasClass('correta')) {
+         cont_v += 1;
+      } else {
+         cont_f += 1;
+      }
+      $(this).addClass('verificado');
+    });
+     
+    if(cont_v === 6 && cont_f === 0){
+    $('#btnAvancar').removeAttr('disabled')
+         document.getElementById("botao").style.backgroundColor = "green";  
+
+    } else{
+     document.getElementById("botao").style.backgroundColor = "red";  
+    
+    $('.palavra').off('click');
+   }
+    }
+ 
+ 
+ </script> 
+ <style> 
+
+    span.palavra.clicado{
+      background-color: yellow;
+    }
+    span.palavra.verificado{
+      background-color: red;
+    }
+    span.palavra.correta.verificado{
+      background-color: green;
+    }
+   
+  
+</style>
+<link rel="stylesheet" type="text/css" href="css.css">
+</html>

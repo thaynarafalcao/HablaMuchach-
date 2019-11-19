@@ -1,0 +1,90 @@
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title>¡Habla, Muchach@!</title>
+ </head>
+ <body>
+  <div class="row">
+    <div class="col-12 cabecalho">
+     
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 menuEsquerdo">    
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-8 principal">
+    <center>
+      <div id="quadrado">
+      <div id="primeiro">
+      <p>2. Ahora escucha los audios y transcríbelos.</p>
+      <p>I</p>
+
+    
+
+    <div >
+ 	  <audio controls class="audio">
+ 		   <source src="hernan certo.mp3" type="audio/mp3">
+	   </audio>
+	   <div>
+      <textarea cols="45" rows="7"  placeholder="transcribe:"></textarea>
+      </div>
+    </div>
+<br>
+    <div>
+      <button id="botao" onclick="comparar()">Verificar</button>
+
+      <button id="btnAvancar" onclick="window.location.href='ex1.2.1.html';" disabled>Siguiente</button>
+    </div>
+  </div>
+</div>
+  </center>
+  </div>
+
+</div>
+
+
+ <div class="row">
+  <div class="col-2 menuDireito">
+     
+   </div>
+</div>  
+  
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+      </div>
+    </div>
+</div>
+ </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+
+
+  function comparar (){
+    textoCerto = "hola me llamo hernan komori tengo diecisiete años soy estudiante del instituto federal del parana vivo en goioere con mi madre mi padre y mi hermana me gusta hacer gimnasia gracias";
+    textoDigitado = document.querySelector('textarea').value;
+
+    if (textoCerto === textoDigitado) {
+      $('#btnAvancar').removeAttr('disabled');
+     document.getElementById("botao").style.backgroundColor = "green";  
+    }
+
+    else{
+      document.getElementById("botao").style.backgroundColor = "red";
+      alert('Intenta nuevamente :)');
+    }
+  }
+ 
+ </script>
+
+ <link rel="stylesheet" type="text/css" href="css.css">
+
+ </html>   
+     
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>¡Habla, Muchach@!</title>
+</head>
+<meta charset="utf-8">
+<body>
+	<div class="row">
+      <div class="col-12 cabecalho">
+     
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 menuEsquerdo">      
+      </div>
+    </div>
+  
+    <div class="row">
+    <div class="col-8 principal">
+    <center>
+    <div id="quadrado">
+      <div id="primeiro"> 
+	
+	<p>7. Con base en la actividad anterior, completa las frases con los verbos adecuados.</p><br>
+    
+	<div id="esquerda" class="completar">
+    a) Lupe <input id="idade" class="in" type="text" name="a" value=""> diecisiete años.<br>
+		b) Mía <input id="rubia" class="in" type="text" name="b" value=""> rubia.<br>
+		c) Zoe <input id="rata" class="in" type="text" name="c"  value=""> una rata.<br>
+		d) Juanma <input id="pelo" class="in" type="text" name="d" value=""> el pelo largo.<br>	
+	</div>
+
+		<br>
+
+		<button id="botao" onclick="comparar()">Verificar</button>
+		<button id="btnAvancar" onclick="window.location.href='ex3.6.html';"disabled>Siguiente</button>
+  
+</div>
+</div>
+</center>
+</div>
+</div>
+<div class="row">
+  <div class="col-2 menuDireito">   
+  </div>
+</div>  
+  
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+      </div>
+    </div>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  	 function comparar(){ 
+  	 	var idade = document.getElementById('idade');
+  	 	var rubia = document.getElementById('rubia');
+  	 	var rata = document.getElementById('rata');
+  	 	var pelo = document.getElementById('pelo');
+  	 	
+  	 
+  	 	
+  	 	if (idade.value === 'tiene' && rubia.value==='es' && rata.value==='tiene' && pelo.value==='tiene'){
+  	 		document.getElementById("botao").style.backgroundColor = "green";  
+  	 		$('#btnAvancar').removeAttr('disabled');
+  	 		
+  		}
+  		else{
+        document.getElementById("botao").style.backgroundColor = "red";  
+  			alert('Intenta nuevamente :)')
+  	
+  	}		
+    		
+  	 }
+  </script>
+
+
+<link rel="stylesheet" type="text/css" href="css.css">
+</html>

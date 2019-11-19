@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>¡Habla, Muchach@!</title>
+</head>
+<body>
+  <div class="row">
+      <div class="col-12 cabecalho">
+      
+      </div>
+  </div>
+  <div class="row">
+  <div class="col-2 menuEsquerdo">
+    
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="col-8 principal">
+  <center>
+  <div id="quadrado"> 
+	<div class="margem" >
+    <div id="verbo">
+    <p id="centralizar">Verbo Gustar</p>
+    <p><strong>Singular:</strong>
+     <span id="sublinhar">Me gusta el</span> chocolate. <strong>Plural:</strong>
+     <span id="sublinhar">Me gustan</span> mucho <span id="sublinhar">los</span> libros y los chocolates.</p>
+  </div> 
+		<p>II</p>
+	<div>
+	  <audio controls class="audio">
+ 		<source src="thaynara.mp3" type="audio/mp3" >
+	</audio>
+	</div>
+	<div id="area" >
+		<textarea cols="45" rows="7" placeholder="transcribe:"></textarea>
+	</div>
+	</div>
+
+	<div>
+		<button id="botao" onclick="comparar()">Verificar </button>
+		<button id="btnAvancar" onclick="window.location.href='ex1.2.2.html';" disabled>Siguiente</button>
+	</div>
+  <br>
+  
+</div>
+</center>
+</div>
+</div>
+  
+     
+  
+
+
+<div class="row">
+  <div class="col-2 menuDireito">
+     
+   </div>
+</div>	
+	
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+          </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+  function comparar (){
+    textoCerto = "hola mi nombre es tainara tengo diecisiete años estudio informatica en ifpr soy soltera vivo en goioere con mi papa y mi mama tengo una hermana tengo tambien un gatito y un perro me gustan mucho los libros y los chocolates no me gusta el pollo me gusta mucho dormir y quiero estudiar en la universidad ingenieria textil";
+    textoDigitado = document.querySelector('textarea').value;
+
+    if (textoCerto === textoDigitado) {
+      $('#btnAvancar').removeAttr('disabled');
+      document.getElementById("botao").style.backgroundColor = "green";
+    }
+    else{
+      document.getElementById("botao").style.backgroundColor = "red";
+      alert('Intenta nuevamente :)');
+    }
+  }
+ 
+
+ </script>
+
+<link rel="stylesheet" type="text/css" href="css.css">
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>¡Habla, Muchach@!</title>
+</head>
+<body>
+  <div class="row">
+      <div class="col-12 cabecalho">
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 menuEsquerdo">      
+      </div>
+    </div>
+  
+    <div class="row">
+    <div class="col-8 principal">
+    <center>
+    <div id="quadrado">
+      <div id="primeiro">
+	   <p>2. Señala la información incorrecta acerca de las dos series.</p><br>
+    
+	   
+<div>
+	  <input type="radio" name="pergunta1" value="V">Son de género musical<br>
+  	<input  type="radio" name="pergunta1" value="F">Indican cómo ingresar en la universidad<br>
+    <input  type="radio" name="pergunta1" value="V">Se pasan en una escuela de artes<br>
+	
+	<br>
+</div>
+	<button id="botao" onclick="comparar()">Verificar</button>
+	<button id="btnAvancar" onclick="window.location.href='ex3.2.html';"disabled>Siguiente</button>
+	</div>
+</div>
+</center>
+</div>
+</div>
+<div class="row">
+  <div class="col-2 menuDireito">   
+  </div>
+</div>  
+  
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+      </div>
+    </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script >
+ 
+
+  function comparar(){  
+  alternativaUsuario= document.querySelector('input:checked').value;
+
+  	if (alternativaUsuario == 'F') {
+      
+  		document.getElementById("botao").style.backgroundColor = "green";
+      $('#btnAvancar').removeAttr('disabled');
+      
+  	}
+  	else
+      document.getElementById("botao").style.backgroundColor = "red";
+  
+
+
+}
+</script>
+
+  <link rel="stylesheet" type="text/css" href="css.css">
+</html>

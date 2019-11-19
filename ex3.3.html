@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Habla, Muchach@!</title>
+</head>
+<meta charset="utf-8">
+<body>
+  <div class="row">
+      <div class="col-12 cabecalho">
+     
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 menuEsquerdo">      
+      </div>
+    </div>
+  
+    <div class="row">
+    <div class="col-8 principal">
+    <center>
+    <div id="quadrado">
+      <div id="principal">
+        <div id="primeiro">
+ 
+	<p>4. Sobre Mía, señala "V" para las informaciones correctas y "F" para las incorrectas.</p>
+  <div id="esquerda" class="verdade" >
+	 V<input id="artistav" type="radio" name="pergunta1" value="V">
+   F<input id="artistaf" type="radio" name="pergunta1" value="F"> 
+   Es una artista profesional y es muy perseverante.<br>
+
+  V<input  id="liderv" type="radio" name="pergunta2" value="V">
+  F<input  id="liderf" type="radio" name="pergunta2" value="F">   
+  Mía no es la líder de porristas de Sant Mary.<br>
+
+  V<input id="becav" type="radio" name="pergunta3" value="V">
+  F<input id="becaf" type="radio" name="pergunta3" value="F"> 
+  Es una jóven que quiere una beca en Sant Mary.<br>
+</div>
+	<br>
+<button id="botao" onclick="comparar()">Verificar</button>	
+<button id="btnAvancar" onclick="window.location.href='ex3.4.html';" disabled>Siguiente</button>
+</div>
+</div>
+</div>
+</center>
+</div>
+</div>
+<div class="row">
+  <div class="col-2 menuDireito">   
+  </div>
+</div>  
+  
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+      </div>
+    </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script >
+ 
+
+  function comparar(){  
+  var lider = document.getElementById('liderv');
+  var beca = document.getElementById('becav');
+  var artista = document.getElementById('artistaf');
+
+  if(lider.checked && beca.checked && artista.checked){
+  	document.getElementById("botao").style.backgroundColor = "green";
+  	$('#btnAvancar').removeAttr('disabled');
+  }
+  else
+  	document.getElementById("botao").style.backgroundColor = "red";
+
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css.css">
+</html>
+</html>

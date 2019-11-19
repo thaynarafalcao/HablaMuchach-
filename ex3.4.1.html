@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>¡Habla, Muchach@!</title>
+</head>
+<meta charset="utf-8">
+<body>
+  <div class="row">
+      <div class="col-12 cabecalho">
+     
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 menuEsquerdo">      
+      </div>
+    </div>
+  
+    <div class="row">
+    <div class="col-8 principal">
+    <center>
+    <div id="quadrado">
+    <div id="primeiro">
+  
+     <p>6. Haz clic sobre las frases utilizadas para presentar al personaje Lupe.</p>
+  
+     <div id="caixa">   
+  <br>
+  <span class="alternativa correta">I. Es la líder de sus amigas.</span><br><br>
+	<span class="alternativa">II. Se trata de una chica que es súper soñadora. </span><br><br>
+	<span class="alternativa correta">III. Es como la reina del colegio.</span><br><br>
+	<span class="alternativa">IV. Es una adolescente talentosa y perseverante.</span><br><br>
+	<span class="alternativa correta">V. Es la líder de porristas.</span><br><br>
+	</div>
+	<br>
+	<div >
+      <button id="botao" onclick="verificar()">Verificar</button>
+      <button  id="botao" onclick="limpar()">Limpiar</button>
+      <button  id="btnAvancar" onclick="window.location.href='ex3.5.html';" disabled>Siguiente</button>
+  </div>
+</div>
+</div>
+</center>
+	<div class="row">
+  <div class="col-2 menuDireito">   
+  </div>
+</div>  
+  
+<div class="row">
+    <div class="col-12 rodape">
+      <div id="footer">
+            ©Falcão2019
+      </div>
+    </div>
+</div>
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+$('.alternativa').click(function () { clicar(this); });
+
+  function clicar(elemento){
+    if ($(elemento).hasClass('clicado')) {
+      $(elemento).removeClass('clicado');
+    }
+    else{
+      $(elemento).addClass('clicado');
+    }
+    
+  }
+  
+  function limpar(){
+    $('.alternativa').each(function () {
+      $(this).removeClass('verificado');
+      $(this).removeClass('clicado');
+    });
+    $('.alternativa').off('click');
+    $('.alternativa').click(function () { clicar(this); });
+    $('#btnAvancar').attr('disabled', 'disabled');
+  }
+
+    function verificar(elemento){
+      var cont_v = 0;
+      var cont_f = 0;
+    $('.clicado').each(function(){
+      
+      if($(this).hasClass('correta')) {
+         cont_v += 1;
+      } else {
+         cont_f += 1;
+      }
+      $(this).addClass('verificado');
+    });
+     
+    if(cont_v === 3 && cont_f === 0){
+        $('#btnAvancar').removeAttr('disabled')
+        document.getElementById("botao").style.backgroundColor = "green";
+
+    } else
+    document.getElementById("botao").style.backgroundColor = "red";
+
+    $('.alternativa').off('click');
+   
+    }
+ </script>
+ <style>
+ 	span.alternativa.clicado{
+      background-color: yellow;
+    }
+    span.alternativa.verificado{
+      background-color: red;
+    }
+    span.alternativa.correta.verificado{
+      background-color: green;
+    }
+    
+    
+ </style> 
+
+<link rel="stylesheet" type="text/css" href="css.css">
+</html>
+</html>
